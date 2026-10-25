@@ -61,7 +61,7 @@
   gap: clamp(1rem, 2vw, 1.875rem);
 }
 
-@media (min-width: 48.01rem) {
+@media (min-width: 48rem) {
   .events-container {
     flex-direction: row;
   }
@@ -69,6 +69,27 @@
   .sidebar {
     width: min(17.5rem, 30%);
     flex-shrink: 0;
+  }
+
+  .events-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .events-grid > .event-card {
+    flex: 1 1 calc(50% - 0.9375rem);
+    min-width: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  .sidebar {
+    width: 17.5rem;
+  }
+
+  .events-grid {
+    flex: 1;
+    min-width: 0;
   }
 }
 
